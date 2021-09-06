@@ -1,0 +1,10 @@
+.item {
+  width: 200px;
+  height: 150px;
+  background-color: orange;
+  display: inline;
+  position: absolute;
+  /*
+  absolute와 fixed는 display를 block 형태로 변경된다.
+*/
+}
