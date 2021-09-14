@@ -1,0 +1,36 @@
+:root {
+  --color-primary: royalblue;
+  --color-danger: red;
+  /* --color-success: yellowgreen; */
+}
+
+.box {
+  width: 200px;
+  height: 70px;
+  border: 4px solid;
+}
+
+.primary {
+  background-color: var(--color-primary);
+}
+
+.danger {
+  --color-danger: hotpink;
+  background-color: var(--color-danger);
+}
+
+.success {
+  /* 변수의 초기값 설정 */
+  background-color: var(--color-success, orange);
+}
+
+.container {
+  --color-container: brown;
+}
+
+.item {
+  width: 100px;
+  height: 100px;
+  border: 4px solid;
+  background-color: var(--color-container);
+}
