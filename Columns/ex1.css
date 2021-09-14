@@ -1,0 +1,25 @@
+.container {
+  border: 4px solid;
+
+  /* 지정 값에 따라 다단을 다룬다 */
+  /* 다단 개념의 기본값으로 1개의 단을 다룬다 */
+  /* column-count: 1; */
+  /* column-count: 2; */
+  column-count: 3;
+
+  /* 지정된 값으로 브라우저가 최적의 단의 너비를 지정하며 너비로 단을 표현할 수 있다면 단의 개수 역시 지정 값과 다르게 조정될 수 있다. */
+  /* column-width: 300px; */
+  column-width: auto;
+
+  /* 위와 동일한 효과를 count와 width값을 단축속성으로 나타내며 width, count 순이다. */
+  /* columns: 300px 3; */
+
+  /* 단과 단 사이의 선을 설정할 수 있는 단축 속성으로 순서대로 width, style, color에 해당한다. */
+  /* column-rule: 4px solid red; */
+  column-rule-width: 4px;
+  column-rule-style: solid;
+  column-rule-color: red;
+
+  /* 단과 단 사이의 거리를 설정한다. */
+  column-gap: 40px;
+}
