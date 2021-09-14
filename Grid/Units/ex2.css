@@ -1,0 +1,15 @@
+.container {
+  border: 4px solid;
+  display: grid;
+  grid-template-rows: 100px;
+  grid-template-columns: repeat(4, min-content);
+  /* grid-template-columns: repeat(4, max-content); */
+}
+
+.container .item {
+  border: 2px solid;
+  background-color: orange;
+  font-size: 30px;
+  word-break: keep-all;
+  /* 브라우저에서 한글의 최소 콘텐트 단위는 글자 기준이므로 단어 단위로 속성 변경 */
+}
