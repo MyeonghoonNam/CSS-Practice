@@ -1,0 +1,68 @@
+.container {
+  width: 200px;
+  height: 200px;
+}
+
+/* 해당 브라우저에서 backdrop-filter 속성을 지원하면 css 적용 */
+@supports (backdrop-filter: blur(10px)) {
+  .container {
+    backdrop-filter: blur(10px);
+  }
+}
+
+/* 해당 브라우저에서 backdrop-filter 속성을 지원하지 않는다면 css 적용 */
+@supports not (backdrop-filter: blur(10px)) {
+  .container {
+    background-image: linear-gradient(orange, royalblue);
+  }
+}
+
+/* 다중 요소 속성 지원 경우의 크로스브라우징 */
+@supports (display: grid) and (display: flex) {
+  .container {
+    display: grid;
+  }
+
+  .container .item {
+    display: flex;
+  }
+}
+
+/* 다중 요소 속성 지원하지 않는 경우의 크로스브라우징 */
+@supports not ((display: grid) and (display: flex)) {
+  .container {
+    float: left;
+  }
+
+  .container .item {
+    text-align: center;
+    line-height: 100px;
+  }
+}
+
+/* or를 기점으로 둘 중 혹은 여러 개 중 하나라도 참일 경우 관련 css 값을 적용한다. */
+@supports (display: grid) or (display: flex) {
+  .container {
+    width: 500px;
+  }
+}
+
+/* 변수값에 의한 동작 여부 지원하는 경우의 크로스브라우징 */
+@supports (--color-primary: orange) {
+  .container {
+    border: 10px solid var(--color-primary, orange);
+  }
+}
+
+@supports not (--color-primary: orange) {
+  .container {
+    border: 10px solid orange;
+  }
+}
+
+/* css 선택자 동작 여부 */
+@supports (selector(.container)) {
+  .container {
+    border: 10px solid orange;
+  }
+}
