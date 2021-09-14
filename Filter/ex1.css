@@ -1,0 +1,60 @@
+.container {
+  /* 다양한 filter 함수 사용 가능 */
+
+  /* 요소의 내용을 흐림 처리를 할 수 있게 해준다 */
+  /* filter: blur(10px); */
+
+  /* 요소의 무채색을 적용하는 속성으로 기본값은 100%이다. */
+  /* filter: grayscale(40%); */
+
+  /* 요소가 가진 색상들을 반전 시키는 효과로 기본값은 100%이다. */
+  /* filter: invert(80%); */
+
+  /* x, y축으로의 그림자 효과를 지정할 수 있다. */
+  /* x축 기준점 위치, y축 기준점 위치, 그림자흐림정도, 그림자색상으로 입력한다. */
+  /* 요소의 배경색상이나 배경이미지가 없는 경우에만 내부에 있는 아이템의 경계에 맞게 아이템에 효과가 지정된다 */
+  /* filter: drop-shadow(10px 20px 10px red); */
+
+  /* 기본값이 1으로 요소의 밝기 정도를 나타내며 기본값 보다 작으면 어두워지고 높으면 밝아진다. */
+  /* filter: brightness(1); */
+
+  /* 색상의 대비를 조정해주는 함수로 기본값은 100%이다. */
+  /* filter: contrast(100%); */
+
+  /* opacity 속성과 다른 filter의 함수이며 기본값이 100%로 시작되며 값은 퍼센트 단위로 이루어진다. */
+  /* 요소의 투명도를 지정한다. */
+  /* filter: opacity(80%); */
+
+  /* 요소의 채도를 지정하며 기본값은 100%이다. */
+  /* filter: saturate(100%); */
+
+  /* sepia톤은 오래된 사진을 표현하는 톤과 비슷한 느낌의 톤을 지정하는 함수이다. 기본값은 100% 이다. */
+  /* filter: sepia(0); */
+
+  /* 색의 분포가 이루어진 원형표를 기준으로 각도에 해당하는 색조를 지정하는 함수이다. */
+  filter: hue-rotate(320deg);
+
+  /* filter: grayscale(40%) blur(10px) */
+}
+
+.container .item {
+  width: 120px;
+  height: 120px;
+  background-image: linear-gradient(orange, royalblue);
+}
+
+.container img {
+  width: 220px;
+}
+
+.cover {
+  width: 150px;
+  height: 200px;
+  border: 4px solid;
+  position: fixed;
+  top: 30px;
+  left: 30px;
+
+  /* 자기 자신에 filter 함수들을 적용하는 것이 아니라 해당하는 요소의 배경에 보여지는 영역에 filter 함수를 적용하는 속성이다.*/
+  backdrop-filter: blur(10px) grayscale();
+}
